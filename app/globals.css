@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply touch-manipulation;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply text-secondary min-h-screen;
+  }
+
+  button {
+    @apply select-none;
+  }
+}
+
+@layer utilities {
+  .safe-padding {
+    @apply px-4 md:px-6;
+  }
+
+  .safe-padding-y {
+    @apply py-3 md:py-4;
+  }
+
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  .gradient-warm {
+    background: linear-gradient(135deg, #FF5A5F 0%, #FF8B8E 100%);
+  }
+
+  .gradient-subtle {
+    background: linear-gradient(180deg, rgba(255, 90, 95, 0.05) 0%, rgba(255, 90, 95, 0) 100%);
+  }
+}
